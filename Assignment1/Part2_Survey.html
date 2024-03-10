@@ -1,0 +1,141 @@
+<!-- This code is to display survey page -->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+header {
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bold;
+color: white;
+font-size: 40px;
+background-color: #006633;
+padding: 10px;
+}
+
+body {
+background-color: #FFCC33;
+font-family: Arial, Helvetica, sans-serif;
+padding: 10px;
+}
+
+footer {
+font-family: Arial, Helvetica, sans-serif;
+background-color: #006633;
+color: white;
+padding: 5px;
+}
+
+</style>
+</head>
+
+<body>
+<!-- header for the page -->
+<header>
+Student Survey
+</header>
+<br>
+
+<h4>Visit CS Department page - </h4><a href="Part2_CS.html">CS Department Page</a><br><br>
+<h5>*Fields are required</h5><br>
+
+<!-- form starts here to display checkboxes,dropdowns,radio buttons,text area etc. -->
+<form autocomplete="on">
+<label for="username">Username:*</label>
+<input type="text" id="username" name="username" placeholder="Enter Username" required="required"><br><br>
+<label for="address">Street Address:*</label>
+<input type="text" id="address" name="address" placeholder="Enter Street Address" required="required"><br><br>
+<label for="city">City:*</label>
+<input type="text" id="city" name="city" placeholder="Enter City" required="required"><br><br>
+<label for="state">State:*</label>
+<input type="text" id="state" name="state" placeholder="Enter State" required="required"><br><br>
+<label for="zip">Zip:*</label>
+<input type="text" id="zip" name="zip" placeholder="Enter Zip" required="required"><br><br>
+<label for="tel">Telephone Number:*</label>
+<input type="tel" id="tel" name="tel" placeholder="123-456-7890" required="required"><br><br>
+<label for="email">Email:*</label>
+<input type="email" id="email" name="email" placeholder="example@example.com" required="required"><br><br>
+<label for="url">URL:</label>
+<input type="url" id="url" name="url" placeholder="example.com" required="required"><br><br>
+<label for="date">Date of Survey:*</label>
+<input type="date" id="date" name="date" required="required"><br><br>
+
+<!-- for checkboxes -->
+<label>What did you like most about the campus?*</label><br>
+<input type="checkbox" id="students" name="stud">
+<label for="students">Students</label><br>
+<input type="checkbox" id="location" name="loc">
+<label for="location">Location</label><br>
+<input type="checkbox" id="campus" name="camp">
+<label for="campus">Campus</label><br>
+<input type="checkbox" id="atmosphere" name="atmos">
+<label for="atmosphere">Atmosphere</label><br>
+<input type="checkbox" id="dorms" name="room">
+<label for="dorms">Dorm Rooms</label><br>
+<input type="checkbox" id="sports" name="sprt">
+<label for="sports">Sports</label><br><br>
+
+<!-- for radio buttons -->
+<label>How did you become interested in the university?*</label><br>
+<input type="radio" id="friends" name="frnd">
+<label for="friends">Friends</label><br>
+<input type="radio" id="television" name="tele">
+<label for="television">Television</label><br>
+<input type="radio" id="internet" name="inter">
+<label for="internet">Internet</label><br>
+<input type="radio" id="other" name="other">
+<label for="other">Other</label><br><br>
+
+<!-- for text area -->
+<label for="comments">Additional Comments:</label><br>
+<textarea id="comments" name="comments" rows="4" cols="30" placeholder="Enter your comments"></textarea><br><br>
+
+<!-- for datalist -->
+<label for="graduation">High School Graduation:*</label>
+<input list="gradmon" id="grad" name="gradmon" required="required">
+<datalist id="graduation-month">
+<option value="January">
+<option value="February">
+<option value="March">
+<option value="April">
+<option value="May">
+<option value="June">
+<option value="July">
+<option value="August">
+<option value="September">
+<option value="October">
+<option value="November">
+<option value="December">
+</datalist>
+<input type="text" id="graduation-year" name="gradyr" placeholder="Year" required="required"><br><br>
+
+<!-- for dropdown -->
+<label for="recommend">Likelihood of Recommending:*</label>
+<select id="recommend" name="recommend">
+<option value="Very Likely">Very Likely</option>
+<option value="Likely">Likely</option>
+<option value="Unlikely">Unlikely</option>
+</select><br><br><br>
+
+<!-- for submit -->
+<input type="submit" value="Submit"><br><br>
+</form>
+
+<!-- focus on username -->
+<script>
+document.getElementById("username").focus();
+</script>
+
+<!-- footer for the page -->
+<footer>
+<img src="GMU-Logo.jpg" alt="gmu_logo" width=140 height=140 align="right">
+Department of Computer Science<br>
+Nguyen Engineering Building<br>
+4400 University Drive<br>
+Fairfax, VA 22030<br>
+<br>
+Contact<br>
+703-993-1530 (P)<br>
+703-993-1710 (F)<br>
+</footer>
+</body>
+</html>

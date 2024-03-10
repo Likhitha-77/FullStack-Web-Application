@@ -1,0 +1,171 @@
+<!-- This code is for CS department webpage -->
+<!DOCTYPE html>
+<head>
+<title>CS Department</title>
+<style>
+header {
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bold;
+color: white;
+font-size: 40px;
+background-color: #006633;
+padding: 10px;
+}
+
+body {
+background-color: #FFCC33;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+h3 {
+text-align: center;
+font-family: Arial, Helvetica, sans-serif;
+}
+
+table,td,th {
+border:solid black 1px;
+
+}
+
+.container {
+font-family: Arial, Helvetica, sans-serif;
+padding: 10px;
+background-color: #D3D3D3;
+}
+
+.courses {
+text-align: center;
+border: 5px solid #006633;
+padding: 5px;
+box-shadow: 5px 5px #98fb98;
+}
+
+footer {
+font-family: Arial, Helvetica, sans-serif;
+background-color: #006633;
+color: white;
+padding: 5px;
+}
+</style>
+</head>
+
+<body>
+<!-- header for the page -->
+<header>
+Department of Computer Science
+<img src="GMU-Logo.jpg" alt="gmu_logo" width=70 height=70 align="left">
+</header>
+<br><br>
+
+<div class="courses">
+<h1>Courses</h1>
+</div><br>
+
+<!-- description -->
+<div class="container">
+<h3><b>Welcome to the Department of Computer Science at George Mason University!</b></h3>
+<p>The Computer Science Department at Mason is the largest department in the College of Engineering and Computing, one of the largest departments on campus, and the largest, fastest growing, and best ranking Computer Science department in the Commonwealth of Virginia, with almost 80 full-time faculty members.</p>
+<p>Undergraduate courses with the CS and SWE prefixes are available, as are graduate courses with the CS, INFS, ISA, and SWE prefixes.<br>
+The official descriptions for the CS department's courses may be found in the Mason catalogue.<br>
+<ul>
+<li>Computer Science (CS) courses</li>
+<li>Information Systems (INFS) courses</li>
+<li>Information Security and Assurance (ISA) courses</li>
+<li>Software Engineering (SWE) courses</li>
+</ul>
+<h4>CS Required Courses:</h4>
+<!-- table to display courses -->
+<table>
+<tr>
+<th>Course Number</th><th>Course Name</th>
+</tr>
+<tr>
+<td>CS 583</td><td>Analysis of Algorithms</td>
+</tr>
+<tr>
+<td>CS 550</td><td>Database Systems</td>
+</tr>
+<tr>
+<td>CS 580</td><td>Introduction to Artificial Intelligence</td>
+</tr>
+<tr>
+<td>CS 650</td><td>Advanced Database Management</td>
+</tr>
+<tr>
+<td>INFS 623</td><td>Web Search Engines and Recommender Systems</td>
+</tr>
+</table><br>
+<h4>INFS Required Courses:</h4>
+<table>
+<tr>
+<th>Course Number</th><th>Course Name</th>
+</tr>
+<tr>
+<td>COMP 502</td><td>Mathematical Foundations of Computing</td>
+</tr>
+<tr>
+<td>CS 550</td><td>Database Systems</td>
+</tr>
+<tr>
+<td>INFS 580</td><td>Analytics: Big Data to Information</td>
+</tr>
+<tr>
+<td>INFS 611</td><td>Rapid Information Systems Prototyping</td>
+</tr>
+<tr>
+<td>INFS 622</td><td>Information Systems Analysis and Design</td>
+</tr>
+</table><br>
+<h4>ISA Required Courses:</h4>
+<table>
+<tr>
+<th>Course Number</th><th>Course Name</th>
+</tr>
+<tr>
+<td>ISA 562</td><td>Information Security Theory and Practice</td>
+</tr>
+<tr>
+<td>ISA 656</td><td>Network Security</td>
+</tr>
+<tr>
+<td>INFS 612</td><td>Principles and Practice of Communication Networks</td>
+</tr>
+<tr>
+<td>CS 555</td><td>Communications and Networking</td>
+</tr>
+</table><br>
+<h4>SWE Required Courses:</h4>
+<table>
+<tr>
+<th>Course Number</th><th>Course Name</th>
+</tr>
+<tr>
+<td>SWE 619</td><td>Object-Oriented Software Specification and Construction</td>
+</tr>
+<tr>
+<td>SWE 621</td><td>Software Modeling and Architectural Design</td>
+</tr>
+<tr>
+<td>SWE 632</td><td>User Interface Design and Development</td>
+</tr>
+<tr>
+<td>SWE 637</td><td>Software Testing</td>
+</tr>
+</table>
+</div>
+<br><br>
+
+<!-- footer for the page -->
+<footer>
+<img src="GMU-Logo.jpg" alt="gmu_logo" width=140 height=140 align="right">
+Department of Computer Science<br>
+Nguyen Engineering Building<br>
+4400 University Drive<br>
+Fairfax, VA 22030<br>
+<br>
+Contact<br>
+703-993-1530 (P)<br>
+703-993-1710 (F)<br>
+</footer>
+</body>
+</html>

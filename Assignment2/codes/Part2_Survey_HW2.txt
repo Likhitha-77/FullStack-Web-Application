@@ -1,0 +1,202 @@
+<!-- This code is to display survey page -->
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+header {
+font-family: Arial, Helvetica, sans-serif;
+font-weight: bold;
+color: white;
+font-size: 40px;
+background-color: #006633;
+padding: 10px;
+}
+
+body {
+background-color: #FFCC33;
+font-family: Arial, Helvetica, sans-serif;
+padding: 10px;
+}
+
+h3 {
+text-align: center;
+}
+
+footer {
+font-family: Arial, Helvetica, sans-serif;
+background-color: #006633;
+color: white;
+padding: 5px;
+}
+</style>
+</head>
+
+<body>
+<!-- header for the page -->
+<header>
+Student Survey
+</header>
+<br>
+<h3>Greetings, Welcome to SWE642 Survey.</h3>
+<h4>Visit CS Department page - </h4><a href="Part2_CS_HW2.html">CS Department Page</a><br><br>
+<h5>*Fields are required</h5><br>
+
+<!-- form starts here to display checkboxes,dropdowns,radio buttons,text area etc. -->
+<form autocomplete="on">
+<label for="username">Username:*</label>
+<input type="text" id="username" name="username" placeholder="Enter Username" required="required" onclick="checkSurvey()"><br><br>
+<label for="address">Street Address:*</label>
+<input type="text" id="address" name="address" placeholder="Enter Street Address" required="required" onclick="checkSurvey()"><br><br>
+<label for="zip">Zip:*</label>
+<input type="text" id="zip" name="zip" placeholder="Enter Zip" required="required"><br>
+<p>City:<span id="city"></span></p>
+<p>State:<span id="state"></span></p>
+<label for="tel">Telephone Number:*</label>
+<input type="tel" id="tel" name="tel" placeholder="123-456-7890" required="required"><br><br>
+<label for="email">Email:*</label>
+<input type="email" id="email" name="email" placeholder="example@example.com" required="required" onclick="checkSurvey()"><br><br>
+<label for="url">URL:</label>
+<input type="url" id="url" name="url" placeholder="example.com" required="required"><br><br>
+<label for="date">Date of Survey:*</label>
+<input type="date" id="date" name="date" required="required"><br><br>
+
+<!-- for checkboxes -->
+<label>What did you like most about the campus?*</label><br>
+<input type="checkbox" id="students" name="students" onclick="checkSurvey()">
+<label for="students">Students</label><br>
+<input type="checkbox" id="location" name="location" onclick="checkSurvey()">
+<label for="location">Location</label><br>
+<input type="checkbox" id="campus" name="campus" onclick="checkSurvey()">
+<label for="campus">Campus</label><br>
+<input type="checkbox" id="atmosphere" name="atmosphere" onclick="checkSurvey()">
+<label for="atmosphere">Atmosphere</label><br>
+<input type="checkbox" id="dorms" name="dorms" onclick="checkSurvey()">
+<label for="dorms">Dorm Rooms</label><br>
+<input type="checkbox" id="sports" name="sports" onclick="checkSurvey()">
+<label for="sports">Sports</label><br><br>
+
+<!-- for radio buttons -->
+<label>How did you become interested in the university?*</label><br>
+<input type="radio" id="friends" name="friends" onclick="checkSurvey()">
+<label for="friends">Friends</label><br>
+<input type="radio" id="television" name="television" onclick="checkSurvey()">
+<label for="television">Television</label><br>
+<input type="radio" id="internet" name="internet" onclick="checkSurvey()">
+<label for="internet">Internet</label><br>
+<input type="radio" id="other" name="other" onclick="checkSurvey()">
+<label for="other">Other</label><br><br>
+
+<!-- for text area -->
+<label for="comments">Additional Comments:</label><br>
+<textarea id="comments" name="comments" rows="4" cols="30" placeholder="Enter your comments"></textarea><br><br>
+
+<!-- for datalist -->
+<label for="graduation">High School Graduation:*</label>
+<input list="gradmon" id="grad" name="gradmon" required="required" placeholder="Month">
+<datalist id="graduation-month">
+<option value="January">
+<option value="February">
+<option value="March">
+<option value="April">
+<option value="May">
+<option value="June">
+<option value="July">
+<option value="August">
+<option value="September">
+<option value="October">
+<option value="November">
+<option value="December">
+</datalist>
+<input type="text" id="graduation-year" name="gradyr" placeholder="Year" required="required"><br><br>
+
+<!-- for dropdown -->
+<label for="recommend">Likelihood of Recommending:*</label>
+<select id="recommend" name="recommend">
+<option value="Very Likely">Very Likely</option>
+<option value="Likely">Likely</option>
+<option value="Unlikely">Unlikely</option>
+</select><br><br>
+
+<!-- new text box-->
+<label for="data">Data:*</label>
+<input type="text" id="data" name="data" placeholder="1-100" required="required"><br><br>
+<p>Average:<span id="average"></span></p>
+<p>Maximum:<span id="maximum"></span></p>
+<br><br>
+
+<!-- for submit -->
+<input type="submit" value="Submit"><br><br>
+
+
+<!--reset-->
+<input type="reset" value="Reset"><br><br>
+</form>
+
+<script>
+document.getElementById("username").focus();
+
+function checkSurvey(){
+  var errors = [];
+
+  // Check name textbox
+  var name = document.getElementById('username');
+  var nameCondition = /^[A-Za-z]+$/;
+  if (!nameCondition.test(name.value)) {
+    errors.push('Name should contain only alphabets.');
+  }
+
+  // Check Address textbox
+  var address = document.querySelectorAll('address');
+  var addressCondition = /^[A-Za-z0-9\s]+$/;
+  for (var i = 0; i < address.length; i++) {
+    if (!addressCondition.test(address[i].value)) {
+      errors.push('Address should contain only alphanumeric characters.');
+      break;
+    }
+  }
+
+  // Check checkboxes
+  var checkboxes = document.querySelectorAll('input[type="checkbox"]:checked');
+  if (checkboxes.length < 2) {
+    errors.push('Select at least two checkboxes.');
+  }
+
+  // Check radio button
+  var radioButtons = document.querySelectorAll('input[type="radio"]:checked');
+  if (radioButtons.length == 0) {
+    errors.push('Select a radio button option.');
+  }
+
+  // Validate Email address format
+  var email = document.getElementById('email');
+  var emailCondition = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
+  if (!emailCondition.test(email.value)) {
+    errors.push('Please enter a valid email address.');
+  }
+
+  // Display error message
+  if (errors.length > 0) {
+    var errorMessage = 'Follow the validation requirements. \n\n';
+    errorMessage += errors.join('\n');
+    window.alert(errorMessage);
+    return false;
+  }
+  // All validations passed
+  return true;
+}
+</script>
+
+<!-- footer for the page -->
+<footer>
+<img src="GMU-Logo.jpg" alt="gmu_logo" width=140 height=140 align="right">
+Department of Computer Science<br>
+Nguyen Engineering Building<br>
+4400 University Drive<br>
+Fairfax, VA 22030<br>
+<br>
+Contact<br>
+703-993-1530 (P)<br>
+703-993-1710 (F)<br>
+</footer>
+</body>
+</html>

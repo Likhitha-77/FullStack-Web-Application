@@ -1,0 +1,8 @@
+Links for HW1 -
+Object URL - https://swe642-hw1.s3.amazonaws.com/Part1.html
+Bucket website endpoint - http://swe642-hw1.s3-website-us-east-1.amazonaws.com
+
+
+Links for HW2 -
+Object URL - https://swe642-hw2.s3.amazonaws.com/Part1_HW2.html
+Bucket website endpoint - http://swe642-hw2.s3-website-us-east-1.amazonaws.com
